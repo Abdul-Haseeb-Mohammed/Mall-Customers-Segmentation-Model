@@ -54,6 +54,6 @@ def show_clusters(dataset,hue_by,save_path=None):
     if save_path:
         plt.savefig(save_path, dpi=300)
         plt.close()
-        print(f"Silhouette Plot plot saved to {os.path.abspath(save_path)}")
+        print(f"Clusters visualization plot saved to {os.path.abspath(save_path)}")
     else:
         plt.show()
