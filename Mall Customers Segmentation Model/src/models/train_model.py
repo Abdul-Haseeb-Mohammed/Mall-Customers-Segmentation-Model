@@ -12,7 +12,7 @@ def train_k_means(train_data):
         kmodel = KMeans(n_clusters=i).fit(train_data)
         wcss_score = kmodel.inertia_
         ypred = kmodel.labels_
-        sil_score = silhouette_score(df[['Annual_Income','Spending_Score']], ypred)
+        sil_score = silhouette_score(train_data[['Annual_Income','Spending_Score']], ypred)
         SS.append(sil_score)
         WCSS.append(wcss_score)
         K.append(i)
